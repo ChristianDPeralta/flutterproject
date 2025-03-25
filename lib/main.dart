@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'homepage_CDMP.dart';
+import 'signup_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -89,7 +90,17 @@ class _LoginFormState extends State<LoginForm> {
           ),
         ),
         SizedBox(height: 20),
-        ElevatedButton(onPressed: _handleLogin, child: Text('Login'))
+        ElevatedButton(onPressed: _handleLogin, child: Text('Login')),
+        SizedBox(height: 10),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SignUpPage()),
+            );
+          },
+          child: Text('Sign Up'),
+        ),
       ],
     );
   }
